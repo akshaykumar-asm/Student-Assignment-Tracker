@@ -1,0 +1,235 @@
+.student-assignments-view {
+  min-height: calc(100vh - 70px);
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+  padding: 2rem 1rem;
+}
+
+.assignments-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.assignments-container h1 {
+  color: #333;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.empty-state {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  text-align: center;
+  color: #999;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.assignments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.assignment-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.assignment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+  padding: 1.5rem;
+  border-bottom: 2px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1rem;
+}
+
+.card-header h3 {
+  margin: 0;
+  color: #333;
+  flex: 1;
+}
+
+.subject-badge {
+  padding: 0.5rem 1.5rem;
+  background: #f0f4ff;
+  color: #3b82f6;
+  border-left: 4px solid #3b82f6;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.status-badge {
+  padding: 0.35rem 0.75rem;
+  background: #f59e0b;
+  color: white;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.status-badge.submitted {
+  background: #10b981;
+}
+
+.status-badge.overdue {
+  background: #ef4444;
+}
+
+.description {
+  padding: 1rem 1.5rem;
+  color: #666;
+  font-size: 0.95rem;
+  flex: 1;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.card-meta {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.due-date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-actions {
+  padding: 1rem 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  flex: 1;
+  min-width: 120px;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.download-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+@media (max-width: 768px) {
+  .assignments-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-actions {
+    flex-direction: column;
+  }
+
+  .action-btn {
+    min-width: auto;
+  }
+}
+
+/* Grade Section Styles */
+.grade-section {
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, #ecf9f5 0%, #d6f5ee 100%);
+  border-top: 2px solid #10b981;
+}
+
+.grade-display {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.grade-display svg {
+  color: #10b981;
+}
+
+.grade-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #059669;
+}
+
+.feedback-section {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.feedback-label {
+  margin: 0 0 0.5rem 0;
+  color: #059669;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.feedback-text {
+  margin: 0;
+  color: #333;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.assignment-card.graded {
+  border-top: 4px solid #10b981;
+}
+
+.status-badge.graded {
+  background: #10b981;
+}
+
+.badge-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.extension-date {
+  display: block;
+  color: #f59e0b;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
